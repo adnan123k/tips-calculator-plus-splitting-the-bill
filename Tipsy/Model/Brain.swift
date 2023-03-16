@@ -22,7 +22,10 @@ class brain {
         howMany=h
     }
     public func cal()->String{
-        let i = Float(self.bill!)
+        var i:Float? = Float(self.bill!)
+        if(i==nil){
+            i=0.0
+        }
         let j=(i! + i!*pre!)/Float(howMany!)
         return String(format: "%.2f", j)
     }
